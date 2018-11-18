@@ -31,7 +31,7 @@
 </template>
 <script>
 export default{
-	name:'picture',
+	name:'picture1',
 	data(){
 		return{
  			topics:[
