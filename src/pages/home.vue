@@ -91,6 +91,15 @@ export default{
 				hotTime:"2018-10-10"},
 			]
 		}
+	},
+	created(){
+		this.$http.get("http://www.wwtliu.com/sxtstu/blueberrypai/getIndexBanner.php").then(res => {
+			this.bannersData = res.data.banner;
+			console.log('ok');
+		})
+		.catch(error => {
+			console.log(error);
+		});
 	}
 }
 	

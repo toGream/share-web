@@ -12,11 +12,13 @@ import Viewer from 'v-viewer'
 import 'viewerjs/dist/viewer.css'
 //velocity组件实现动画效果 npm install --save velocity-animate
 import  Velocity from 'velocity-animate'
+import axios from 'axios'
+
 
 Vue.use(ElementUI)
 Vue.use(Viewer)
-
 Vue.config.productionTip = false
+Vue.prototype.$http=axios
 
 /* eslint-disable no-new */
 new Vue({
