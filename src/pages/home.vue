@@ -2,13 +2,13 @@
 	<div id="container">
 		<!--左侧-->
 		<div id="main_left">
-			<div class="left_hot" v-for="hot in hotList">
+			<div class="left_hot" v-for="hot in classfications">
 				<div class="hot_title">
 					<h3>{{hot.name}}</h3>
 				</div>
 				<div class="hot_best">
-					<div class="hot_best_item" v-for="title in hot.titles">
-						<a href="#">{{title.title}}</a>
+					<div class="hot_best_item" v-for="title in hot.articles">
+						<router-link :to="{name:'/articleDetail', query:{articleId : title.articleId}}">{{title.title}}</router-link>
 					</div>
 				</div>
 			</div>
@@ -89,12 +89,14 @@ export default{
 				hotLink:"", 
 				hotDesc:"现在一年的时间又快过去了，市场环境已经发生了许多的变化，我虽然也执有各种加密币，但总体风格偏向保守，基于以下原因，我不会大量加仓：1、EOS 是当前区块链项目中第二大中心化的项目（第一大是 RIPPLE)，并且自带增发通胀属性；2、EOS 代币没有经过充分换手，暂时没有生态应用支撑", 
 				hotTime:"2018-10-10"},
-			]
+			],
+			classfications:[]
 		}
 	},
 	created(){
-		this.$http.get("http://www.wwtliu.com/sxtstu/blueberrypai/getIndexBanner.php").then(res => {
-			this.bannersData = res.data.banner;
+		this.$http.get("http://localhost:8082/article/articles").then(res => {
+			this.classfications = res.data;
+			console.log(this.classfications);
 			console.log('ok');
 		})
 		.catch(error => {

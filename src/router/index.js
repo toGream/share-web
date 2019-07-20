@@ -8,6 +8,7 @@ import Technology from '@/pages/technology'
 import Topic from '@/pages/topic'
 import AboutMe from '@/pages/aboutMe'
 import Vedio from '@/pages/vedio'
+import articleDetail from '@/pages/detail'
 
 
 Vue.use(Router)
@@ -53,6 +54,11 @@ export default new Router({
       path: '/vedio',
       name: 'vedio',
       component: Vedio
+    },
+    {
+      path: '/articleDetail',//path: '/articleDetail/:id',
+      name: '/articleDetail',
+      component: articleDetail
     }
   ]
 })

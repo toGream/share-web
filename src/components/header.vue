@@ -22,7 +22,7 @@ export default{
 		 	menus:[
 			 	{name:"首页",url:"/"},
 			 	{name:"个人日记",url:"personLog"},
-			 	{name:"技术博文",url:"topic"},
+			 	// {name:"技术博文",url:"topic"},
 			 	{name:"图片收藏",url:"picture"},
 			 	{name:"程序资料",url:"technology"},
 			 	{name:"视频",url:"vedio"},
