@@ -23,7 +23,6 @@ Vue.use(ElementUI)//全局使用该组件
 Vue.use(Viewer)
 Vue.config.productionTip = false
 Vue.prototype.$http=axios
-Vue.use(VueQuillEditor)
 
 /* eslint-disable no-new */
 new Vue({
