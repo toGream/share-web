@@ -13,11 +13,6 @@ import 'viewerjs/dist/viewer.css'
 //velocity组件实现动画效果 npm install --save velocity-animate
 import  Velocity from 'velocity-animate'
 import axios from 'axios'
-//引入vue-quill-editor编辑器
-import VueQuillEditor from 'vue-quill-editor'
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
 //引入ueditor编辑器
 import '../static/UE/ueditor.config.js'
 import '../static/UE/ueditor.all.min.js'
