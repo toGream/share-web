@@ -38,14 +38,14 @@ export default{
 	},
 	created(){
 		this.articleId = this.$route.query.articleId;//获取路径参数
-		this.$http.get("http://localhost:8082/article/detail/"+ this.articleId).then(res => {
+		this.$http.get("http://zhongyiliang.cn:8082/article/detail/"+ this.articleId).then(res => {
 			this.detail = res.data;
 		})
 		.catch(error => {
 			console.log(error);
 		});
 
-		this.$http.get("http://localhost:8082/article/articles").then(res => {
+		this.$http.get("http://zhongyiliang.cn:8082/article/articles").then(res => {
 			this.classfications = res.data;
 		})
 		.catch(error => {

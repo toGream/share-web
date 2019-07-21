@@ -94,7 +94,7 @@ export default{
 		}
 	},
 	created(){
-		this.$http.get("http://localhost:8082/article/articles").then(res => {
+		this.$http.get("http://zhongyiliang.cn:8082/article/articles").then(res => {
 			this.classfications = res.data;
 			console.log(this.classfications);
 			console.log('ok');
