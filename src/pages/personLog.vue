@@ -40,7 +40,7 @@ export default{
         console.log(content1)
         console.log(this.selectValue)
 
-        this.$http.post("http://localhost:8082/article/save",{
+        this.$http.post("http://zhongyiliang.cn:8082/article/save",{
         	title:this.title,
         	content:content1,
         	classId:this.selectValue
@@ -69,7 +69,7 @@ export default{
         
       }
     },created(){
-		this.$http.get("http://localhost:8082/article/classfications").then(res => {
+		this.$http.get("http://zhongyiliang.cn:8082/article/classfications").then(res => {
 			this.classfications = res.data;
 			console.log(this.classfications);
 			console.log('ok');
